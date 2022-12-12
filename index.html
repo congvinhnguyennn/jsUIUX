@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tabs</title>
+  <link rel="stylesheet" href="/css/assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+<div>
+  <!-- Tab items -->
+  <div class="tabs">
+    <div class="tab-item active">
+        <i class="fa-solid fa-book"></i>
+      Bài 1
+    </div>
+    <div class="tab-item">
+        <i class="fa-solid fa-book"></i>
+      Bài 2
+    </div>
+    <div class="tab-item">
+        <i class="fa-solid fa-book"></i>
+      Bài 3
+    </div>
+    <div class="tab-item">
+        <i class="fa-solid fa-book"></i>
+      Bài 4
+    </div>
+    <div class="tab-item">
+        <i class="fa-solid fa-book"></i>
+      Bài 5
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Tab content -->
+  <div class="tab-content">
+    <div class="tab-pane active">
+        <i class="fa-solid fa-sack-dollar"></i><h2>Tính tiền lương nhân viên</h2>
+        <form action="" class="row algin-item-center px-2">
+              <div class="col-12 col-lg-4">
+                  <input type="number" placeholder="Nhập lương một ngày" value="salary" id="inputNum1" class="formInput">
+              </div>
+              <div class="col-12 col-lg-4">
+                  <input type="number" placeholder="Số ngày làm" value="days" id="inputNum2" class="formInput">
+              </div>
+          <div class="col-12">
+            <button class="btn mb-4 mt-4" type="button" id="btnSalary" onclick="salary()">Tính lương</button>
+          </div>
+          <div class="alert alert-success" role="alert">
+            👉<span id="txtSalary"></span>
+          </div>
+        </form>
+    </div>
+    <div class="tab-pane">
+        <i class="fa-solid fa-calculator"></i><h2>Tính trung bình</h2>
+        <form action="" class="row algin-item-center px-2 bai2">
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số thứ 1" value="salary" id="Num1" class="formInput">
+          </div>
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số thứ 2" value="days" id="Num2" class="formInput">
+          </div>
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số thứ 3" value="days" id="Num3" class="formInput">
+          </div>
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số thứ 4" value="days" id="Num4" class="formInput">
+          </div>
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số thứ 5" value="days" id="Num5" class="formInput">
+          </div>
+          <div class="col-12">
+            <button class="btn mb-4 mt-4" type="button" id="btnAverage" onclick="average()">Tính trung bình</button>
+          </div>
+          <div class="alert alert-success" role="alert">
+            👉<span id="txtAverage"></span>
+          </div>
+        </form>
+    </div>
+    <div class="tab-pane">
+        <i class="fa-solid fa-dollar-sign"></i><h2>Đổi tiền tệ</h2>
+        <form action="" class="row algin-item-center px-2 bai3">
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số tiền USD" value="currency" id="currencyUSD" class="formInput">
+          </div>
+          <div class="col-12">
+            <button class="btn mb-4 mt-4" type="button" id="btnCurrency" onclick="exchangeCurrency()">Đổi tiền</button>
+          </div>
+          <div class="alert alert-success" role="alert">
+            👉<span id="txtCurrency"></span>
+          </div>
+        </form>
+    </div>
+    <div class="tab-pane">
+      <i class="fa-solid fa-ruler"></i><h2>Tính diện tích, chu vi hình chữ nhật</h2>
+      <form action="" class="row algin-item-center px-2 bai4">
+        <div class="col-12 col-lg-4">
+            <input type="number" placeholder="Nhập chiều dài" value="height" id="height" class="formInput">
+        </div>
+        <div class="col-12 col-lg-4">
+            <input type="number" placeholder="Nhập chiều rộng" value="width" id="width" class="formInput">
+        </div>
+        <div class="col-12">
+          <button class="btn mb-4 mt-4" type="button" id="btnCal" onclick="calcRectangle()">Tính</button>
+        </div>
+        <div class="alert alert-success" role="alert">
+          👉<span id="txtCalc"></span>
+        </div>
+      </form>
+    </div>
+    <div class="tab-pane">
+        <i class="fa-solid fa-calculator"></i><h2>Tính 2 ký số</h2>
+        <form action="" class="row algin-item-center px-2 bai3">
+          <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập số có 2 chữ số" value="sum" id="sumTens" class="formInput">
+          </div>
+          <div class="col-12">
+            <button class="btn mb-4 mt-4" type="button" id="btnSum" onclick="sumOfTens()">Tính tổng</button>
+          </div>
+          <div class="alert alert-success" role="alert">
+            👉<span id="txtSum"></span>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>
