@@ -27,10 +27,10 @@ tabs.forEach((tab, index) => {
 
 
 function salary(){
-  var arr = document.getElementsByTagName("input");
-  var salary = arr[0].value;
-  var days = arr[1].value;
-  var e = salary * days;
+  let arr = document.getElementsByTagName("input");
+  let salary = arr[0].value;
+  let days = arr[1].value;
+  let e = salary * days;
   document.getElementById("txtSalary").innerHTML = e;
 }
 
@@ -53,22 +53,22 @@ function average(){
 }
 
 function exchangeCurrency(){
-  var usd = document.getElementById("currencyUSD").value;
-  var e = new Intl.NumberFormat("vn-Vn").format(usd * 23500);
+  let usd = document.getElementById("currencyUSD").value;
+  let e = new Intl.NumberFormat("vn-Vn").format(usd * 23500);
   document.getElementById("txtCurrency").innerHTML = e;
 }
 
 function calcRectangle(){
-  var width = document.getElementById("width").value;
-  var height = document.getElementById("height").value;
-  var e = width * height;
-  var t = 2 * (width+height);
+  let width = document.getElementById("width").value;
+  let height = document.getElementById("height").value;
+  let e = width * height;
+  let t = 2 * (width+height);
   document.getElementById("txtCalc").innerHTML = `\n        Diện tích: ${e};\n        Chu vi: ${t}\n    `
 }
 
 function sumOfTens(){
-  var e = document.getElementById('sumTens').value;
-  var t = Math.floor(e/10);
-  var n = e%10;
+  let e = document.getElementById('sumTens').value;
+  let t = Math.floor(e/10);
+  let n = e%10;
   document.getElementById("txtSum").innerHTML = t+n;
 }
